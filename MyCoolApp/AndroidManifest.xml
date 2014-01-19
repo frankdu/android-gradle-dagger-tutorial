@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="0.0.1"
+          package="com.frankdu.cool">
+
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="16"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/launcher_app_name"
+            android:name=".app.MyCoolApplication"
+            >
+        <activity
+                android:name=".activity.SplashActivity"
+                android:configChanges="keyboard|orientation|keyboardHidden"
+                android:exported="true"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.MainCoolActivity" />
+
+        <meta-data android:name="com.google.android.gms.version" android:value="4030500" />
+    </application>
+</manifest>

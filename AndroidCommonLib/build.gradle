@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.+'
+    }
+}
+
+apply plugin: 'android-library'
+apply from: "${rootDir}/android_common.gradle"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+
+    compile 'com.android.support:support-v4:19.0.+'
+
+    // Notice the @aar suffix
+    compile 'com.google.android.gms:play-services:3.2.25@aar'
+
+    // Notice the @aar suffix
+    compile('com.actionbarsherlock:actionbarsherlock:4.4.0@aar')
+
+    compile 'com.squareup.dagger:dagger:1.1.0'
+    compile 'com.squareup.dagger:dagger-compiler:1.1.0'
+    compile 'com.squareup:otto:1.3.4'
+}
+
+android {
+    defaultConfig {
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+}

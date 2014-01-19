@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="launcher_app_name">Cool App</string>
+    <string name="app_name">Your Cool App</string>
+    <string name="content_title">Swipe left or right to see more!</string>
+</resources>
