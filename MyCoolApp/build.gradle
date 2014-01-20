@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    apt 'com.squareup.dagger:dagger-compiler:1.1.0'
+    apt 'com.squareup.dagger:dagger-compiler:1.2.0'
 
     compile fileTree(dir: 'libs', include: '*.jar')
 

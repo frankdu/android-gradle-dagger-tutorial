@@ -5,7 +5,9 @@ In this tutorial
 ----------------
 1. It sets up two scopes: app scope vs activity scope.
 2. Project structure makes it easy to create multiple apps out of single codebase.
-3. Corresponding blog post http://www.frankdu.com/blog/2014/01/18/tutorial-create-android-gradle-project-with-dagger/
+3. It encourages module sharing and reusing.
+4. It support dagger code gen with both android app and library projects.
+5. Corresponding blog post http://www.frankdu.com/blog/2014/01/18/tutorial-create-android-gradle-project-with-dagger/
 
 Change Log
 ----------------
