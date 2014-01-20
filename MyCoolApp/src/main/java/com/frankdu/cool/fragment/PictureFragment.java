@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.frankdu.common.BaseFragment;
 import com.frankdu.cool.R;
+import com.squareup.otto.Bus;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Inject;
@@ -15,10 +16,16 @@ import javax.inject.Inject;
 public class PictureFragment extends BaseFragment {
 
     /**
-     * Inject the instance
+     * The dependency is provided in {@link com.frankdu.cool.app.MyCoolAppScopeModule}
      */
     @Inject
     Picasso mPicasso;
+
+    /**
+     * The dependency is provided in {@link com.frankdu.common.AndroidAppModule}
+     */
+    @Inject
+    Bus mEventBus;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

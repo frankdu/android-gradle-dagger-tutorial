@@ -17,12 +17,11 @@ import dagger.Provides;
  * Here it provides the dependencies those have same lifetime of one activity in your MyCoolApp
  */
 @Module(
-        complete = true,
+        complete = true,    // Here we enable object graph validation
         library = true,
         addsTo = MyCoolAppScopeModule.class, // Important for object graph validation at compile time
         injects = {
                 SplashActivity.class,
-                // DeviceLocationService.class,
                 MainCoolActivity.class,
                 IntroFragment.class,
                 PictureFragment.class,
