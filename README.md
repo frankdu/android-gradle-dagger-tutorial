@@ -11,6 +11,7 @@ In this tutorial
 
 Change Log
 ----------------
+* [2014-01-26] Upgraded gradle to 1.10 and gradle android plugin to 0.8.+. So nice sd provided scope is here!
 * [2014-01-19] Change to use android-apt plugin 1.2 for dagger-compiler code gen
 * [2014-01-18] Initial push of the code base.
 
