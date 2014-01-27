@@ -7,25 +7,19 @@ buildscript {
         // The plus sign tells gradle to aumatically pick up latest version. Check the dynamic
         // version section at:
         //     http://www.gradle.org/docs/current/userguide/dependency_management.html
-        classpath 'com.android.tools.build:gradle:0.7.+'
-
-        // To support code generation by dagger-compiler
-        // For the latest version of the android-apt plugin, visit
-        //    https://bitbucket.org/hvisser/android-apt
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.2'
+        classpath 'com.android.tools.build:gradle:0.8.+'
     }
 }
 
 apply plugin: 'android-library'
 apply from: "${rootDir}/android_common.gradle"
-apply plugin: 'android-apt'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    apt 'com.squareup.dagger:dagger-compiler:1.2.0'
+    provided 'com.squareup.dagger:dagger-compiler:1.2.0'
 
     compile fileTree(dir: 'libs', include: '*.jar')
 
@@ -37,8 +31,6 @@ dependencies {
     // Notice the @aar suffix
     compile('com.actionbarsherlock:actionbarsherlock:4.4.0@aar')
 
-    // It works with dagger 1.1.0 too. Didn't check older versions.
-    // For latest versions, search http://search.maven.org/
     compile 'com.squareup.dagger:dagger:1.2.0'
 
     compile 'com.squareup:otto:1.3.4'

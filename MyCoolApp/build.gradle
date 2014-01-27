@@ -4,25 +4,19 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
-
-        // To support code generation by dagger-compiler
-        // For the latest version of the android-apt plugin, visit
-        //    https://bitbucket.org/hvisser/android-apt
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.2'
+        classpath 'com.android.tools.build:gradle:0.8.+'
     }
 }
 
 apply plugin: 'android'
 apply from: "${rootDir}/android_common.gradle"
-apply plugin: 'android-apt'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    apt 'com.squareup.dagger:dagger-compiler:1.2.0'
+    provided 'com.squareup.dagger:dagger-compiler:1.2.0'
 
     compile fileTree(dir: 'libs', include: '*.jar')
 
