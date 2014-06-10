@@ -1,29 +1,13 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        // The plus sign tells gradle to aumatically pick up latest version. Check the dynamic
-        // version section at:
-        //     http://www.gradle.org/docs/current/userguide/dependency_management.html
-        classpath 'com.android.tools.build:gradle:0.8.+'
-    }
-}
-
 apply plugin: 'android-library'
 apply from: "${rootDir}/android_common.gradle"
 
-repositories {
-    mavenCentral()
-}
 
 dependencies {
-    provided 'com.squareup.dagger:dagger-compiler:1.2.0'
+    provided 'com.squareup.dagger:dagger-compiler:1.2.1'
 
     compile fileTree(dir: 'libs', include: '*.jar')
 
-    compile 'com.android.support:support-v4:19.0.+'
+    compile 'com.android.support:support-v4:19.1.+'
 
     // Notice the @aar suffix
     compile 'com.google.android.gms:play-services:3.2.25@aar'
@@ -31,17 +15,12 @@ dependencies {
     // Notice the @aar suffix
     compile('com.actionbarsherlock:actionbarsherlock:4.4.0@aar')
 
-    compile 'com.squareup.dagger:dagger:1.2.0'
+    compile 'com.squareup.dagger:dagger:1.2.1'
 
     compile 'com.squareup:otto:1.3.4'
 }
 
 android {
-    defaultConfig {
-        versionCode 1
-        versionName "1.0.0"
-    }
-
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
